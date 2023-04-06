@@ -1,0 +1,37 @@
+<!--
+<form [formGroup]="formGroup" (ngSubmit)="login()">
+
+<label for="user_name">Username:</label><br>
+<input type="text" id="username" name="username" [formControl]="usernameControl"><br>
+<label for="pwd" >Password:</label><br>
+<input type="password" id="pwd" name="pwd" [formControl]="passwordControl">
+
+</form>
+<button type="submit" routerLink="/listdisplay" (click)="confirm()">Submit</button>
+
+<button routerLink="/listdisplay">登入</button>
+-->
+
+
+<h1>Login Page</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label for="user_name">Username:</label><br>
+    <input type="text" id="username" name="username" required /><br>
+    <label for="pwd" >Password:</label><br>
+    <input type="password" id="pwd" name="pwd" required />
+</form>
+<button type="submit" routerLink="/listdisplay" >登入</button>
+
+<!--
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<div>
+  <label for="">Username：</label>
+  <input type="text" formControlName="username" required />
+</div>
+<div>
+  <label for="">passWord：</label>
+  <input type="password" formControlName="password" required />
+</div>
+<button [disabled]="!form.valid">Login</button>
+</form>
+-->

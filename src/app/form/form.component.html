@@ -1,0 +1,12 @@
+<!---
+<button id="patch" (click)="getjson()" >showform</button>
+<button id="patch" (click)="test_get_jsonform()" >patchvalue</button>
+<p>form-work</p>
+
+-->
+<button id="patch" (click)="test_get_jsonform()" [disabled]="disabled" >智慧引入</button>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
+</form>
+<button id="patch" (click)="store()" >送出</button>

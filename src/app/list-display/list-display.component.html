@@ -1,0 +1,36 @@
+<!--
+<h1>into list-display</h1>
+
+
+<P id="list"></P>
+<div #buttonsContainer style="display:flex;flex-wrap:wrap">
+<table id="table_list" >
+
+</table>
+
+
+
+</div>
+<button routerLink="/home" (click)="goform()" >前往表單</button>
+-->
+<!--
+<button (click)='showlist()'>Click me for new button</button>
+-->
+<br>
+<tbody>
+<tr>
+  <th>序號</th>
+  <th>項目</th>
+  <th>version_code</th>
+  <th>edit_date</th>
+</tr>
+<tr *ngFor="let list of list_values ;let i = index">
+    <td>{{i+1}}</td>      
+    <td>{{list.doc_name}}</td>
+    <td>{{list.version_code}}</td>
+    <td>{{list.edit_date}}</td>     
+    <td>
+      <button (click)="goform(list.appdoc_id)" >編輯</button>   
+    </td>
+</tr>
+</tbody>
